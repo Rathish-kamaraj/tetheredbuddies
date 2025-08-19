@@ -1,0 +1,43 @@
+{
+  "appId": "com.tetheredbuddies.game",
+  "productName": "Tethered Buddies",
+  "directories": {
+    "output": "build-electron"
+  },
+  "files": [
+    "dist/**/*",
+    "electron.js",
+    "package.json"
+  ],
+  "mac": {
+    "category": "public.app-category.games",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ]
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "linux": {
+    "target": [
+      {
+        "target": "AppImage",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  }
+}
